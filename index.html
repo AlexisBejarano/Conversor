@@ -1,0 +1,208 @@
+<!--ctrl + alt + f Ordenar codigo-->
+<!DOCTYPE doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <meta content="width=device-width, initial-scale=1" name="viewport">
+                <title>
+                    Poryecto Mate. Disc.
+                </title>
+                <!--CSS-->
+                <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" rel="stylesheet"/>
+                <link href="style/style.css" rel="stylesheet" type="text/css">
+                </link>
+            </meta>
+        </meta>
+    </head>
+    <body>
+        <!--div container-fluid-->
+        <div class="container-fluid">
+            <!--div container-main-->
+            <div class="container-main">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <center>
+                        <h1>
+                            Convertir
+                        </h1>
+                    </center>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button aria-controls="flush-collapseOne" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#flush-collapseOne" data-bs-toggle="collapse" type="button">
+                                Convertir Decimal.
+                            </button>
+                        </h2>
+                        <div aria-labelledby="flush-headingOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample" id="flush-collapseOne">
+                            <div class="accordion-body">
+                                <!--Convertidor-->
+                                <div class="row">
+                                    <div class="container-menu-resultados">
+                                        <h4>
+                                            Ingrese un numero Decimal.
+                                        </h4>
+                                        <input class="styleInput" id="datoDecimal" name="datoDecimal" placeholder="Ingrese Numero">
+                                        </input>
+                                        <button class="styleButton" onclick="capturarDecimal()" type="button">
+                                            Imprimir
+                                        </button>
+                                    </div>
+                                    <div class="resultados">
+                                        <p>
+                                            El resultado en Binario es:
+                                        </p>
+                                        <div id="resultadoDecimalBinario">
+                                        </div>
+                                        <p>
+                                            El resultado en Octadecimal es:
+                                        </p>
+                                        <div id="resultadoDecimalOctadecimal">
+                                        </div>
+                                        <p>
+                                            El resultado en Hexadecimal es:
+                                        </p>
+                                        <div id="resultadoDecimalHexadecimal">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Convertidor-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button aria-controls="flush-collapseTwo" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#flush-collapseTwo" data-bs-toggle="collapse" type="button">
+                                Convertir Binario.
+                            </button>
+                        </h2>
+                        <div aria-labelledby="flush-headingTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample" id="flush-collapseTwo">
+                            <div class="accordion-body">
+                                <!--Convertidor-->
+                                <div class="row">
+                                    <div class="container-menu-resultados">
+                                        <h4>
+                                            Ingrese un numero Binario.
+                                        </h4>
+                                        <input class="styleInput" id="datoBinario" name="datoBinario" placeholder="Ingrese Numero">
+                                        </input>
+                                        <button class="styleButton" onclick="capturarBinario()" type="button">
+                                            Imprimir
+                                        </button>
+                                    </div>
+                                    <div class="resultados">
+                                        <p>
+                                            El resultado en Decimal es:
+                                        </p>
+                                        <div id="resultadoBinarioDecimal">
+                                        </div>
+                                        <p>
+                                            El resultado en Octadecimal es:
+                                        </p>
+                                        <div id="resultadoBinarioOctadecimal">
+                                        </div>
+                                        <p>
+                                            El resultado en Hexadecimal es:
+                                        </p>
+                                        <div id="resultadoBinarioHexadecimal">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Convertidor-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button aria-controls="flush-collapseTwo" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#flush-collapseThree" data-bs-toggle="collapse" type="button">
+                                Convertir Octadecimal.
+                            </button>
+                        </h2>
+                        <div aria-labelledby="flush-headingTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample" id="flush-collapseThree">
+                            <div class="accordion-body">
+                                <!--Convertidor-->
+                                <div class="row">
+                                    <div class="container-menu-resultados">
+                                        <h4>
+                                            Ingrese un numero Octadecimal.
+                                        </h4>
+                                        <input class="styleInput" id="datoDecimal" name="datoDecimal" placeholder="Ingrese Numero">
+                                        </input>
+                                        <button class="styleButton" onclick="capturarDecimal()" type="button">
+                                            Imprimir
+                                        </button>
+                                    </div>
+                                    <div class="resultados">
+                                        <p>
+                                            El resultado en Decimal es:
+                                        </p>
+                                        <div id="resultadoOctadecimalDecimal">
+                                        </div>
+                                        <p>
+                                            El resultado en Binario es:
+                                        </p>
+                                        <div id="resultadoOctadecimalBinario">
+                                        </div>
+                                        <p>
+                                            El resultado en Hexadecimal es:
+                                        </p>
+                                        <div id="resultadoOctadecimalHexadecimal">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Convertidor-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button aria-controls="flush-collapseTwo" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#flush-collapseFour" data-bs-toggle="collapse" type="button">
+                                Convertir Hexadecimal.
+                            </button>
+                        </h2>
+                        <div aria-labelledby="flush-headingTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample" id="flush-collapseFour">
+                            <div class="accordion-body">
+                                <!--Convertidor-->
+                                <div class="row">
+                                    <div class="container-menu-resultados">
+                                        <h4>
+                                            Ingrese un numero Hexadecimal.
+                                        </h4>
+                                        <input class="styleInput" id="datoDecimal" name="datoDecimal" placeholder="Ingrese Numero">
+                                        </input>
+                                        <button class="styleButton" onclick="capturarDecimal()" type="button">
+                                            Imprimir
+                                        </button>
+                                    </div>
+                                    <div class="resultados">
+                                        <p>
+                                            El resultado en Decimal es:
+                                        </p>
+                                        <div id="resultadoHexadecimalDecimal">
+                                        </div>
+                                        <p>
+                                            El resultado en Binario es:
+                                        </p>
+                                        <div id="resultadoHexadecimalBinario">
+                                        </div>
+                                        <p>
+                                            El resultado en Octadecimal es:
+                                        </p>
+                                        <div id="resultadoHexadecimalOctadecimal">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Convertidor-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--div container-main-->
+        </div>
+        <!--div container-fluid-->
+    </body>
+</html>
+<!--JS MAIN-->
+<script src="js/js.js" type="text/javascript">
+</script>
+<!--JS BOOTSTRAP-->
+<script crossorigin="anonymous" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
+</script>

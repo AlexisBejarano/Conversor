@@ -1,0 +1,27 @@
+p {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.container-main{
+	margin: auto;
+	width: 800px;
+}
+
+.resultados{
+	margin-top: 10px;
+}
+
+.styleInput{
+	width: 300px;
+}
+
+.styleButton{
+	width: 100px;
+}
+
+.container-menu-resultados{
+	margin: auto;
+	width: 500px;
+    text-align: center;
+}

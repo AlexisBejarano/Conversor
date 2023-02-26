@@ -89,9 +89,7 @@ function capturarBinario() {
     document.getElementById('resultadoBinarioOctadecimal').innerHTML = parseInt(ArrayOctario.reverse().join(''));
     //CONVERTIR BINARIO A HEXADECIMAL
     //Convertir Binario a Decimal, y de ahi hacer la conversion de Decimal  a Hexadecimal.
-console.log(entero);
-
-
+    console.log(entero);
     let ArrayHexa = [];
     while (enteroLimpio > 0) {
         var datoCheck = enteroLimpio % 16;
@@ -115,4 +113,51 @@ console.log(entero);
     }
     document.getElementById('resultadoBinarioHexadecimal').innerHTML = ArrayHexa.reverse().join('');
     return entero;
+}
+//------------------------------------------CONVERSOR OCTAL
+function capturarOctal() {
+    let datoRegistradoOctal = document.getElementById("datoOctal").value;
+    let datoRegistradoOctal2 = document.getElementById("datoOctal").value;
+    let datoRegistradoOctal3 = document.getElementById("datoOctal").value;
+    // CONVERTIR OCTAL A DECIMAL
+    //NO ESTA PEMITIDO ESTA CONVERSION!!!
+    let octal = datoRegistradoOctal;
+    let octalEnDecimal = parseInt(octal, 8); // La base es 8
+    document.getElementById('resultadoOctadecimalDecimal').innerHTML = octalEnDecimal;
+    let octalEnDecimalLimpio = octalEnDecimal;
+    //CONVERTIR OCTAL A BINARIO
+    //Convertir OCTAL a Decimal, y de ahi hacer la conversion de Decimal a BINARIO.
+    let ArrayBinario = [];
+    while (octalEnDecimal > 1) {
+        ArrayBinario.push(octalEnDecimal % 2);
+        octalEnDecimal = Math.floor(octalEnDecimal / 2);
+    }
+    ArrayBinario.push(octalEnDecimal);
+    document.getElementById('resultadoOctadecimalBinario').innerHTML = parseInt(ArrayBinario.reverse().join(''));
+        //CONVERTIR OCTAL A HEXADECIMAL
+    //Convertir OCTAL a Decimal, y de ahi hacer la conversion de Decimal  a Hexadecimal.
+    let ArrayHexa = [];
+    //console.log(datoRegistradoDecimal);
+    while (octalEnDecimalLimpio > 0) {
+        var datoCheck = octalEnDecimalLimpio % 16;
+        if (datoCheck == 10) {
+            datoCheck = "A";
+        } else if (datoCheck == 11) {
+            datoCheck = "B";
+        } else if (datoCheck == 12) {
+            datoCheck = "C";
+        } else if (datoCheck == 13) {
+            datoCheck = "D";
+        } else if (datoCheck == 14) {
+            datoCheck = "E";
+        } else if (datoCheck == 15) {
+            datoCheck = "F";
+        } else {
+            // console.log('else');
+        }
+        ArrayHexa.push(datoCheck);
+        octalEnDecimalLimpio = Math.floor(octalEnDecimalLimpio / 16);
+    }
+    document.getElementById('resultadoOctadecimalHexadecimal').innerHTML = ArrayHexa.reverse().join('');
+    return octalEnDecimal;
 }

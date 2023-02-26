@@ -89,7 +89,6 @@ function capturarBinario() {
     document.getElementById('resultadoBinarioOctadecimal').innerHTML = parseInt(ArrayOctario.reverse().join(''));
     //CONVERTIR BINARIO A HEXADECIMAL
     //Convertir Binario a Decimal, y de ahi hacer la conversion de Decimal  a Hexadecimal.
-    console.log(entero);
     let ArrayHexa = [];
     while (enteroLimpio > 0) {
         var datoCheck = enteroLimpio % 16;
@@ -161,3 +160,41 @@ function capturarOctal() {
     document.getElementById('resultadoOctadecimalHexadecimal').innerHTML = ArrayHexa.reverse().join('');
     return octalEnDecimal;
 }
+
+function capturarHexa() {
+
+	 let datoRegistradoHexa = document.getElementById("datoHexa").value;
+    let datoRegistradoHexa2 = document.getElementById("datoHexa").value;
+    let datoRegistradoHexa3 = document.getElementById("datoHexa").value;
+
+
+//HEXADECIMAL A DECIMAL
+var hex = datoRegistradoHexa;
+var num = parseInt(hex, 16);
+document.getElementById('resultadoHexadecimalDecimal').innerHTML = num;
+
+var numLimpio = num;
+
+
+//CONVERTIR HEXA A BINARIO
+    //Convertir HEXA a Decimal, y de ahi hacer la conversion de Decimal a BINARIO.
+ let ArrayBinario = [];
+while (num > 1) {
+ArrayBinario.push(num % 2);
+num = Math.floor(num / 2);
+}
+ArrayBinario.push(num);
+
+document.getElementById('resultadoHexadecimalBinario').innerHTML = parseInt(ArrayBinario.reverse().join(''));
+
+let ArrayOctario = [];
+    while (numLimpio > 1) {
+        ArrayOctario.push(numLimpio % 8);
+        numLimpio = Math.floor(numLimpio / 8);
+    }
+    ArrayOctario.push(numLimpio);
+
+     document.getElementById('resultadoHexadecimalOctadecimal').innerHTML = parseInt(ArrayOctario.reverse().join(''));
+
+}
+

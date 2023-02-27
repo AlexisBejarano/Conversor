@@ -322,7 +322,7 @@ function calcular() {
 
     //SELECCIONAR EN QUE QUIERES EL RESULTADO.
     if (datoRegistradoTipoResultado == "Decimal") {
-        document.getElementById('resultadoConversionCalculadora').innerHTML = resultadoCompletoLimpio1;
+        document.getElementById('resultadoConversionCalculadora').innerHTML = "El resultado en Decimal es: " + resultadoCompletoLimpio1;
     } else if (datoRegistradoTipoResultado == "Binario") {
         let ArrayBinarioCalculadora = [];
         while (resultadoCompletoLimpio2 > 1) {
@@ -331,7 +331,7 @@ function calcular() {
         }
         ArrayBinarioCalculadora.push(resultadoCompletoLimpio2);
         console.log("El resultado en Binario es: "+ArrayBinarioCalculadora);
-        document.getElementById('resultadoConversionCalculadora').innerHTML = parseInt(ArrayBinarioCalculadora.reverse().join(''));
+        document.getElementById('resultadoConversionCalculadora').innerHTML = "El resultado en Binario es: "+parseInt(ArrayBinarioCalculadora.reverse().join(''));
     } else if (datoRegistradoTipoResultado == "Octadecimal") {
         let ArrayOctarioCalculadora = [];
         while (resultadoCompleto > 1) {
@@ -340,7 +340,7 @@ function calcular() {
         }
         ArrayOctarioCalculadora.push(resultadoCompleto);
         console.log("El resultado en Octario es: "+ArrayOctarioCalculadora);
-        document.getElementById('resultadoConversionCalculadora').innerHTML = parseInt(ArrayOctarioCalculadora.reverse().join(''));
+        document.getElementById('resultadoConversionCalculadora').innerHTML = "El resultado en Octadecimal es: "+parseInt(ArrayOctarioCalculadora.reverse().join(''));
     } else if (datoRegistradoTipoResultado == "Hexadecimal") {
         let ArrayHexaCalculadora = [];
         //console.log(datoRegistradoDecimal);
@@ -365,6 +365,6 @@ function calcular() {
             resultadoCompleto = Math.floor(resultadoCompleto / 16);
         }
         console.log("El resultado en Hexa es: "+ArrayHexaCalculadora);
-        document.getElementById('resultadoConversionCalculadora').innerHTML = ArrayHexaCalculadora.reverse().join('');
+        document.getElementById('resultadoConversionCalculadora').innerHTML = "El resultado en Hexadecimal es: "+ArrayHexaCalculadora.reverse().join('');
     }
 }

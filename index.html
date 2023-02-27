@@ -202,17 +202,39 @@
                         Calculadora
                     </h2>
                 </center>
+                <div class="resultado-calculadora">
+                    <label class="form-label" for="inputState">
+                        Seleccione que ecuación efectuar.
+                    </label>
+                    <select class="form-select selector-calculadora" id="seleccionEcuacion">
+                        <option selected="">
+                            Seleccione...
+                        </option>
+                        <option>
+                            Suma
+                        </option>
+                        <option>
+                            Resta
+                        </option>
+                        <option>
+                            Multiplicacion
+                        </option>
+                        <option>
+                            Division
+                        </option>
+                    </select>
+                </div>
                 <div class="input-calculadora">
                     <label class="form-label" for="formGroupExampleInput">
                         Digito uno.
                     </label>
-                    <input class="form-control" id="formGroupExampleInput" placeholder="Ingrese digitos." type="text">
+                    <input class="form-control" id="inputDatoUno-calculadora" placeholder="Ingrese digitos." type="text">
                     </input>
                 </div>
                 <label class="form-label" for="inputState">
                     Tipo
                 </label>
-                <select class="form-select selector-calculadora" id="inputState">
+                <select class="form-select selector-calculadora" id="tipoDatoUno">
                     <option selected="">
                         Seleccione...
                     </option>
@@ -233,13 +255,13 @@
                     <label class="form-label" for="formGroupExampleInput">
                         Digito dos.
                     </label>
-                    <input class="form-control" id="formGroupExampleInput" placeholder="Ingrese digitos" type="text">
+                    <input class="form-control" id="inputDatoDos-calculadora" placeholder="Ingrese digitos" type="text">
                     </input>
                 </div>
                 <label class="form-label" for="inputState">
                     Tipo
                 </label>
-                <select class="form-select selector-calculadora" id="inputState">
+                <select class="form-select selector-calculadora" id="tipoDatoDos">
                     <option selected="">
                         Seleccione...
                     </option>
@@ -256,6 +278,28 @@
                         Hexadecimal
                     </option>
                 </select>
+                <div class="resultado-calculadora">
+                    <label class="form-label" for="inputState">
+                        Seleccione como quiere el resultado.
+                    </label>
+                    <select class="form-select selector-calculadora" id="tipoResultado">
+                        <option selected="">
+                            Seleccione...
+                        </option>
+                        <option>
+                            Decimal
+                        </option>
+                        <option>
+                            Binario
+                        </option>
+                        <option>
+                            Octadecimal
+                        </option>
+                        <option>
+                            Hexadecimal
+                        </option>
+                    </select>
+                </div>
                 <center>
                     <button class="styleButton btn-calcular-calculadora" onclick="calcular()" type="button">
                         Calcular

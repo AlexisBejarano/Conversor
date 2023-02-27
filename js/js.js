@@ -57,6 +57,9 @@ function capturarDecimal() {
     document.getElementById('resultadoDecimalOctadecimal').innerHTML = parseInt(ArrayOctario.reverse().join(''));
     document.getElementById('resultadoDecimalHexadecimal').innerHTML = ArrayHexa.reverse().join('');
 }
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
 //-----------------------------------Conversor Binario
 //SCRIPT CONVERTIR BINARIO A Decimal
 function capturarBinario() {
@@ -113,6 +116,9 @@ function capturarBinario() {
     document.getElementById('resultadoBinarioHexadecimal').innerHTML = ArrayHexa.reverse().join('');
     return entero;
 }
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
 //------------------------------------------CONVERSOR OCTAL
 function capturarOctal() {
     let datoRegistradoOctal = document.getElementById("datoOctal").value;
@@ -168,6 +174,9 @@ function capturarHexa() {
     let datoRegistradoHexa3 = document.getElementById("datoHexa").value;
 
 
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
 //HEXADECIMAL A DECIMAL
 var hex = datoRegistradoHexa;
 var num = parseInt(hex, 16);
@@ -198,3 +207,38 @@ let ArrayOctario = [];
 
 }
 
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+//-----------------------------CALCULADORA---------------------------------
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+
+function calcular(){
+//Recoje que ecuacion va a efectuar
+let datoRegistradoTipoEcuacion = document.getElementById("seleccionEcuacion").value;
+//Recoje digitos del input
+let datoRegistradoInputDatoUno = document.getElementById("inputDatoUno-calculadora").value;
+let datoRegistradoInputDatoDos = document.getElementById("inputDatoDos-calculadora").value;
+//Recoje datos tipo de conversion
+let datoRegistradoTipoDatoUno = document.getElementById("tipoDatoUno").value;
+let datoRegistradoTipoDatoDos = document.getElementById("tipoDatoDos").value;
+//Recoje que tipo de resultado quieres
+let datoRegistradoTipoResultado = document.getElementById("tipoResultado").value;
+
+console.log("Dato ingresado");
+console.log(datoRegistradoInputDatoUno);
+console.log("tipo seleccionado");
+console.log(datoRegistradoTipoDatoUno);
+console.log("Dato ingresado");
+console.log(datoRegistradoInputDatoDos);
+console.log("tipo seleccionado");
+
+console.log(datoRegistradoTipoDatoDos);
+
+
+
+
+
+
+}

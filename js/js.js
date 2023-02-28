@@ -25,15 +25,21 @@ function capturarDecimal() {
     //-----------------------------------Decimal a Octario
     let ArrayOctario = [];
     while (datoRegistradoDecimal2 > 1) {
+        //%agarra el reciduo de la division de datoRegistradoDecimal2 entre 8.
+        //.push lo mete al array "ArrayOctario".
         ArrayOctario.push(datoRegistradoDecimal2 % 8);
+        //Math.floor devuelve el numero decimal redondeado.
         datoRegistradoDecimal2 = Math.floor(datoRegistradoDecimal2 / 8);
     }
+    //Lo metemos al ArrayOctario ya limpio como retorno.
     ArrayOctario.push(datoRegistradoDecimal2);
     //-----------------------------------Decimal a Hexadecimal
     let ArrayHexa = [];
     //console.log(datoRegistradoDecimal);
     while (datoRegistradoDecimal3 > 0) {
+        //%agarra el reciduo de division de datoRegistradoDecimal3 entre 16.
         var datoCheck = datoRegistradoDecimal3 % 16;
+        //Pregunta si datoRegistradoDecimal es alguno de estos numeros 10,11,12,13,14,15 y es asi le asigna una letra.
         if (datoCheck == 10) {
             datoCheck = "A";
         } else if (datoCheck == 11) {
@@ -49,7 +55,9 @@ function capturarDecimal() {
         } else {
             // console.log('else');
         }
+        //Mete el datoCheck al arreglo ArrayHexa con el metodo .push.
         ArrayHexa.push(datoCheck);
+        //Math.floor devuelve el numero decimal redondeado.
         datoRegistradoDecimal3 = Math.floor(datoRegistradoDecimal3 / 16);
     }
     //ArrayOctario.push(datoRegistradoDecimal3);
@@ -68,10 +76,12 @@ function capturarBinario() {
     var numeros = datoRegistradoBinario.split("");
     var entero = 0;
     var contador = 0;
+    //.length cuenta cuantos digitos tiene una variable.
     for (var i = numeros.length - 1; i >= 0; i--) {
         if (numeros[i] == 0) {
             array[i] = 0;
         } else {
+            //La función Math.pow() devuelve la base elevada al exponente , esto es, baseexponente.
             array[i] = Math.pow(2, contador);
         }
         contador++;
@@ -85,16 +95,22 @@ function capturarBinario() {
     //Convertir Binario a Decimal, y de ahi hacer la conversion de Decimal a Octadecimal.
     let ArrayOctario = [];
     while (entero > 1) {
+        //%agarra el reciduo de la division de datoRegistradoDecimal2 entre 8.
+        //.push lo mete al array "ArrayOctario".
         ArrayOctario.push(entero % 8);
+        //Math.floor devuelve el numero decimal redondeado.
         entero = Math.floor(entero / 8);
     }
+    //Lo metemos al ArrayOctario ya limpio como retorno.
     ArrayOctario.push(entero);
     document.getElementById('resultadoBinarioOctadecimal').innerHTML = parseInt(ArrayOctario.reverse().join(''));
     //CONVERTIR BINARIO A HEXADECIMAL
     //Convertir Binario a Decimal, y de ahi hacer la conversion de Decimal  a Hexadecimal.
     let ArrayHexa = [];
     while (enteroLimpio > 0) {
+        //%agarra el reciduo de division de datoRegistradoDecimal3 entre 16.
         var datoCheck = enteroLimpio % 16;
+        //Pregunta si datoRegistradoDecimal es alguno de estos numeros 10,11,12,13,14,15 y es asi le asigna una letra.
         if (datoCheck == 10) {
             datoCheck = "A";
         } else if (datoCheck == 11) {
@@ -110,7 +126,9 @@ function capturarBinario() {
         } else {
             // console.log('else');
         }
+        //Mete el datoCheck al arreglo ArrayHexa con el metodo .push.
         ArrayHexa.push(datoCheck);
+        //Math.floor devuelve el numero decimal redondeado.
         enteroLimpio = Math.floor(enteroLimpio / 16);
     }
     document.getElementById('resultadoBinarioHexadecimal').innerHTML = ArrayHexa.reverse().join('');
@@ -134,6 +152,7 @@ function capturarOctal() {
     //Convertir OCTAL a Decimal, y de ahi hacer la conversion de Decimal a BINARIO.
     let ArrayBinario = [];
     while (octalEnDecimal > 1) {
+        // "%" Retorna el restante después de dividir el número de la izquierda en porciones enteras del de la derecha.
         ArrayBinario.push(octalEnDecimal % 2);
         octalEnDecimal = Math.floor(octalEnDecimal / 2);
     }
@@ -144,7 +163,9 @@ function capturarOctal() {
     let ArrayHexa = [];
     //console.log(datoRegistradoDecimal);
     while (octalEnDecimalLimpio > 0) {
+        //%agarra el reciduo de division de datoRegistradoDecimal3 entre 16.
         var datoCheck = octalEnDecimalLimpio % 16;
+        //Pregunta si datoRegistradoDecimal es alguno de estos numeros 10,11,12,13,14,15 y es asi le asigna una letra.
         if (datoCheck == 10) {
             datoCheck = "A";
         } else if (datoCheck == 11) {
@@ -160,7 +181,9 @@ function capturarOctal() {
         } else {
             // console.log('else');
         }
+        //Mete el datoCheck al arreglo ArrayHexa con el metodo .push.
         ArrayHexa.push(datoCheck);
+        //Math.floor devuelve el numero decimal redondeado.
         octalEnDecimalLimpio = Math.floor(octalEnDecimalLimpio / 16);
     }
     document.getElementById('resultadoOctadecimalHexadecimal').innerHTML = ArrayHexa.reverse().join('');
@@ -176,21 +199,30 @@ function capturarHexa() {
     //-------------------------------------------------------------------------------------
     //HEXADECIMAL A DECIMAL
     var hex = datoRegistradoHexa;
+    //define los numeros Hexadecimal con la funcion "hex, 16" y los pasa a decimal
     var num = parseInt(hex, 16);
     document.getElementById('resultadoHexadecimalDecimal').innerHTML = num;
+    //metemos la variable num a limpio antes de modificaciones.
     var numLimpio = num;
     //CONVERTIR HEXA A BINARIO
     //Convertir HEXA a Decimal, y de ahi hacer la conversion de Decimal a BINARIO.
     let ArrayBinario = [];
     while (num > 1) {
+        // "%" Retorna el restante después de dividir el número de la izquierda en porciones enteras del de la derecha.
         ArrayBinario.push(num % 2);
+        //console.log("Se divide entre 2: " + datoRegistradoDecimal / 2);
+        //console.log("Se le aplica el Math.floor: " + Math.floor(datoRegistradoDecimal / 2));
+        //Funcion Math.floor agarra el dato menor. Ej: 2.8 = 2.
         num = Math.floor(num / 2);
     }
+    retorna el resultado ya limpio al arreglo.
     ArrayBinario.push(num);
     document.getElementById('resultadoHexadecimalBinario').innerHTML = parseInt(ArrayBinario.reverse().join(''));
     let ArrayOctario = [];
     while (numLimpio > 1) {
+        // "%" Retorna el restante después de dividir el número de la izquierda en porciones enteras del de la derecha.
         ArrayOctario.push(numLimpio % 8);
+        //Mismo de division entre 2.
         numLimpio = Math.floor(numLimpio / 8);
     }
     ArrayOctario.push(numLimpio);
@@ -213,22 +245,7 @@ function calcular() {
     let datoRegistradoTipoDatoDos = document.getElementById("tipoDatoDos").value;
     //Recoje que tipo de resultado quieres
     let datoRegistradoTipoResultado = document.getElementById("tipoResultado").value;
-    /*
-    console.log("Tipo de ecuacion");
-    console.log(datoRegistradoTipoEcuacion);
-    console.log("Dato ingresado Uno");
-    console.log(datoRegistradoInputDatoUno);
-    console.log("tipo seleccionado Uno");
-    console.log(datoRegistradoTipoDatoUno);
-    console.log("Dato ingresado Dos");
-    console.log(datoRegistradoInputDatoDos);
-    console.log("tipo seleccionado Dos")
-    console.log(datoRegistradoTipoDatoDos);
-    console.log("Tipo de resultado");
-    console.log(datoRegistradoTipoResultado);
-
-    console.log("-------------------------------");
-    */
+    
     //Dato Ya convertido
     let resultadoCompleto = 0;
     let datoDecimalConvertidoUno = 0;
